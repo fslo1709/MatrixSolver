@@ -1,6 +1,7 @@
 /// Author: Fernando Sebastian Lopez Ochoa
 
 class MatrixSolver {
+    /// Element used to store the three values together in a queue
     public class queueElement {
         public int x;
         public int y;
@@ -13,10 +14,13 @@ class MatrixSolver {
         }
     }
 
+    /// Auxiliary function to determine if the cell that we want to visit is 
+    /// inside the boundaries
     static bool isValidCell(int x, int y, int n) {
         return (x >= 0) && (x < n) && (y >= 0) && y < n;
     }
 
+    /// All 8 directions the maze can be traversed as
     static int []xMoves = {-1, 0, 1, -1, 1, -1, 0, 1};
     static int []yMoves = {-1, -1, -1, 0, 0, 1, 1, 1};
 
